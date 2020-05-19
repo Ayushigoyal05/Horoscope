@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap" rel="stylesheet"> 
+ 
+    <title>Form</title>
+</head>
+<style>
+    .cont{
+        display: flex;
+        /* background:url(sky.jpg) no-repeat ; */
+        /* opacity: 0.8; */
+        justify-content: center;
+        align-content: center;
+        
+    }
+    .navbar{
+        color: white;
+        background-color:black;
+        padding: 0px 10px;
+        opacity: .9;
+        border: rgb(58, 210, 248) 1.5px solid;
+        border-radius: 50px;
+
+    }
+    .navbar ul li{
+        list-style: none;
+        font-size: 15px;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+    .container{
+        position: absolute;
+        top: 15%;
+        border-radius: 7px;
+        height: 250px;
+        width: 450px;
+        background-color: black;
+        opacity: .9;
+       display: flex;
+       flex-direction: column;
+       color: white;
+       /* justify-content: center; */
+       /* align-items: center; */
+       /* margin: 250px auto; */
+    }
+    h2{
+        font-family: 'Baloo Bhai 2', cursive;
+        margin :10px auto;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 25px;
+    }
+    form input{
+        background-color: black;
+        color: white;
+        border: rgb(51, 157, 206) 1.5px solid;
+        border-radius: 20px;
+        padding: 5px 10px;
+        margin :5px 0px;
+        
+    }
+    form label{
+        padding: 0px 10px;
+        font-family: 'Baloo Bhai 2', cursive;
+        font-weight: bold;
+    }
+    #btn{
+        display: block;
+        margin: 10px auto;
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.507);
+        border: rgb(51, 157, 206) 1.5px solid;
+        color: white;
+        border-radius: 20px;
+    }
+    .imgcont{
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        height: 20%;
+        width: 100%;
+
+    }
+    
+    .horo{
+        position: absolute;
+        bottom: 180px;
+        left: 75px;
+        width: 90%;
+        color: black;
+        text-align: center;
+        font-family: 'Inria Serif', serif;
+        
+    }
+    .imgc{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100px;
+        margin: 0px 15px;
+        font-family: 'Inria Serif', serif
+    }
+    .imgc img{
+        margin: 0px 10px;
+        width: 100%;
+        height: 70%;
+    }
+
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li>Your Horoscope</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cont">
+    <div class="container">
+        <h2>FORM</h2>
+        <form  action="" method="post">
+             {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter name"> 
+            <label for="date">Date of Birth</label>
+            <input type="date" id="date" name="date" placeholder="Date"> 
+            <input id="btn" type="submit">
+        </form>
+    </div>
+</div>
+            <div class="horo">
+                <h1>Horoscope</h1>
+                <p>A horoscope is an astrological chart or diagram representing the positions of the Sun, Moon, planets, astrological aspects and sensitive angles at the time of an event, such as the moment of a person's birth.In Hindu astrology, birth charts are called Kundali which are very significant and are based on movement of stars and moon. All the auspicious things are started after checking the kundali of a person including the marriage in which the birth charts of the boy and girl are matched. </p>
+            </div>
+        <div class="imgcont">
+            <div class="imgc">
+                <img src="{% static 'Aquarious.png' %}" alt="">
+                <p>Aquarious</p> 
+            </div>
+            <div class="imgc">
+                <img src="{% static 'aries.png' %}" alt="">
+                <p>Aries</p> 
+            </div>
+            <div class="imgc">
+                <img src="{% static 'cancer.png' %}" alt="">
+                <p>Cancer</p> 
+            </div>
+            <div class="imgc">
+                <img src="{% static 'capricorn.png'%} " alt="">
+                <p>Capricorn</p> 
+            </div>
+            <div class="imgc">
+                <img src="{% static 'gemini.png'%} " alt="">
+                <p>Gemini</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'leo.png' %} " alt="">
+                <p>Leo</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'libra.png' %} " alt="">
+                <p>Libra</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'pisces.png' %} " alt="">
+                <p>Pisces</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'sagittarius.png' %} " alt="">
+                <p>Sagittarius</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'scorpio.png'%} " alt="">
+                <p>Scorpio</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'taurus.png' %} " alt="">
+                <p>Taurus</p>
+            </div>
+            <div class="imgc">
+                <img src="{% static 'virgo.png' %} " alt="">
+                <p>virgo</p>
+                
+            </div>  
+        </div>
+   
+</body>
+</html>
